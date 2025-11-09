@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>DefaultEcs.Hierarchy</RootNamespace>
+		<LangVersion>preview</LangVersion>
+		<Title>Hirarchy for DefaultEcs</Title>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>Не официальный пакет расширения для библиотеки DefaultEcs. Пакет дает возможность выстраивать обычную иерархию или по ключу.</Description>
+		<version>1.0.0</version>
+		<authors>Besopuzzz</authors>
+		<dependencies>
+			<dependency id="DefaultEcs" version="0.17.2" />
+			<dependency id="DefaultEcs.Analyzer" version="0.17.0" />
+		</dependencies>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DefaultEcs" Version="0.17.2" />
+		<PackageReference Include="DefaultEcs.Analyzer" Version="0.17.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>
