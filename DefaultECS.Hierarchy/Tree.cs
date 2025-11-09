@@ -31,7 +31,7 @@ namespace DefaultEcs.Hierarchy
         }
 
         /// <summary>
-        /// Освобождает дерево от прослушивания всех мировых <see cref="World"/> событий и от <see cref="Root"/>.
+        /// Освобождает дерево от прослушивания всех мировых <see cref="World"/> событий.
         /// </summary>
         public virtual void Dispose()
         {
