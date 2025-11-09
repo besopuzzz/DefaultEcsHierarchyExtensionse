@@ -40,6 +40,14 @@ namespace DefaultEcs.Hierarchy
             return trees;
         }
 
+        internal static void UseHierarchy(World world)
+        {
+            if (_trees.ContainsKey(world))
+                return;
+
+            GetOrCreate(world);
+        }
+
         internal TreeReference GetRoot()
         {
             return GetRoot(World);

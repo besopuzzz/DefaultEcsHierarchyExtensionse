@@ -23,7 +23,7 @@ namespace DefaultEcs.Hierarchy
         }
 
         /// <summary>
-        /// Устанавливает для дочеренй сущности родителя.
+        /// Устанавливает для дочереней сущности родителя.
         /// </summary>
         /// <param name="child">Сущность, для которой устанавливается родитель.</param>
         /// <param name="parent">Сущность-родитель или <c>null</c>, если дочернюю сущность необходимо установить в корень.</param>
@@ -34,6 +34,8 @@ namespace DefaultEcs.Hierarchy
 
             if (parent.HasValue && parent.Value.IsParent(child))
                 return;
+
+            Trees.UseHierarchy(child.World);
 
             child.Set(new Children(parent));
         }
